@@ -24,6 +24,11 @@ function main() {
       let isMultiDayEvent = (events[i].getEndTime() - events[i].getStartTime()) > 24 * 60 * 60 * 1000;
       let isAllDayEvent = events[i].isAllDayEvent();
 
+      // 複数日にまたがるイベントの場合、スキップ
+      if (isMultiDayEvent) {
+        continue;
+      }
+
       // 終日イベントの場合、配列に追加
       if (isAllDayEvent) {
         allDayEvents.push(events[i]);
