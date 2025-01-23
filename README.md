@@ -1,6 +1,9 @@
 # Google Calendar to Slack Status Updater
 
 This Google Apps Script updates your Slack status based on your Google Calendar events. It sets your status to `:crying-boar: "in a meeting"` if there is an ongoing event, and reverts to the default status `:boar:` when you are not in a meeting.
+## TODO:
+1. allow for customization of status message
+2. allow for finer grained control - different status messages for different meeting types (possibly, may skip this)
 
 ## Prerequisites
 
